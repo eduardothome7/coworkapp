@@ -1,0 +1,97 @@
+<%= form_for(room, :html => { :multipart => true }) do |f| %>
+  <% if room.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(room.errors.count, "error") %> prohibited this room from being saved:</h2>
+
+      <ul>
+      <% room.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cep %>
+    <%= f.text_field :cep %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :n %>
+    <%= f.text_field :n %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ngb %>
+    <%= f.text_field :ngb %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telephone %>
+    <%= f.text_field :telephone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :celphone %>
+    <%= f.text_field :celphone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :picture %>
+    <%= f.text_field :picture %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :facebook_profile %>
+    <%= f.text_field :facebook_profile %>
+  </div>
+
+  <div class="field">
+    <%= f.label :instagram_profile %>
+    <%= f.text_field :instagram_profile %>
+  </div>
+
+  <div class="field">
+    <%= f.label :open_at %>
+    <%= f.datetime_select :open_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :close_at %>
+    <%= f.datetime_select :close_at %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
