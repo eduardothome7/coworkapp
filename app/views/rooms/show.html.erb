@@ -52,7 +52,7 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @room.picture %>
+  <%= image_tag(@room.picture_url) if @room.picture.present? %>
 </p>
 
 <p>
