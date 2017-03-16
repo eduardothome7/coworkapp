@@ -15,5 +15,54 @@
 //= require jquery-ui
 //= require bootstrap-sprockets
 //= require data-confirm-modal
+//= require moment
+//= require bootstrap-datetimepicker
 //= require_tree .
 
+$(document).ready(function() {
+
+
+	$('.cep').change(function() {
+		
+		var cep = $(this).val();
+
+		$('#cep_msg').html('Buscando CEP...');
+
+		$.getJSON("//viacep.com.br/ws/"+ cep +"/json/?callback=?", function(data) {
+
+            if (!("erro" in data)) {
+            	$('#cep_msg').html('');
+                $("#logradouro").val(data.logradouro);
+                $("#bairro").val(data.bairro);
+                $("#cidade").val(data.localidade);
+                $("#uf").val(data.uf);
+           	} else {
+                //CEP pesquisado não foi encontrado.
+                $('#cep_msg').html('CEP não encontrado');
+            }
+        });
+	});
+
+	$('.timepicker').datetimepicker({
+    	format: 'LT'
+    });
+
+    $('#room_name').change(function(){
+
+        var name = $(this).val();
+
+        $.ajax({
+            url: '/rooms/'+name,
+            success: function(data) {
+
+            },
+            error: function(data) {
+
+            }
+        });
+
+    });
+
+
+
+});

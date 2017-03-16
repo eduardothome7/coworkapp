@@ -1,0 +1,77 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		  <%= render('room_steps/step_progress', :locals => {@step_1 => 'complete', @step_2 => 'complete', :step_3 => 'complete', :step_4 => 'disabled' }) %>
+
+<h3>Horário de Funcionamento</h3>
+<hr>
+<%= form_for @room, url: wizard_path, method: :put do |f| %>
+  
+  <% if @room.errors.any? %>
+    <div id="error_explanation">
+      <h4><%= pluralize(@room.errors.count, "erros") %> encontrados durante o cadastro da sala:</h4>
+
+      <ul>
+      <% @room.errors.full_messages.each do |message| %>
+        <li><span class="glyphicon glyphicon-remove"></span> <%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+  	<div class="col-md-6">
+ 	  <div class="form-group span-group">
+	  	<%= f.label :horário_de_abertura %> <small><em>não preencha em caso de 24h </em></small>
+       	<span class="glyphicon glyphicon-time span-input"></span> <%= f.text_field :open_at, class: 'form-control timepicker' %>
+	  </div>
+	</div>	
+  	<div class="col-md-6">
+  	  <div class="form-group span-group">
+    	<%= f.label :horário_de_fechamento %>
+    	<span class="glyphicon glyphicon-time span-input"></span> <%= f.text_field :close_at, class: 'form-control timepicker' %>
+  	  </div>
+  	</div>
+  </div>
+
+  <h3>Contato</h3>
+  <hr>
+  <div class="form-group span-group">
+    <%= f.label "email_do_espaço " %> <small><em> não preencha para utilizar seu email pessoal</em></small>
+    <span class="glyphicon glyphicon-envelope span-input"></span><%= f.email_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="form-group span-group">
+    <%= f.label "perfil_facebook " %>
+    <i class="fa fa-facebook span-input" aria-hidden="true"></i><%= f.text_field :facebook_profile, class: 'form-control' %>
+  </div>
+
+  <div class="form-group span-group">
+    <%= f.label "perfil_instagram " %>
+    <i class="fa fa-instagram span-input" aria-hidden="true"></i><%= f.text_field :instagram_profile, class: 'form-control' %>
+  </div>
+
+  <div class="form-group span-group">    
+  	<%= f.label "Telefone (Fixo) *" %>
+    <span class="glyphicon glyphicon-phone span-input"></span><%= f.text_field :"telephone", class: 'form-control' %>
+  </div>
+
+  <div class="form-group span-group">
+    <%= f.label "Telefone (Celular) *" %>
+    <i class="fa fa-whatsapp span-input" aria-hidden="true"></i><%= f.text_field :celphone, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-9">
+       	<%= link_to 'Voltar', previous_wizard_path %>
+      </div>		
+      <div class="col-md-3">
+        <%= f.submit "Próximo", class: 'btn btn-primary btn-block'  %>
+      </div>
+    </div>
+  </div>
+
+<% end %>
+
+</div>
+</div>

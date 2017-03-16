@@ -1,0 +1,40 @@
+.form-control {
+	border-radius: 0;
+}
+
+.span-group {
+	position: relative;
+
+	.span-input {
+		position: absolute;
+		top: 60%;
+    	left: 9px;
+	}
+	
+	.form-control {
+		padding-left: 30px;
+	}
+}
+
+
+#error_explanation {
+
+	h4 {
+		color: red;
+	}
+	
+	ul {
+		background: #f9f9f9;
+    	padding-top: 7px;
+    	padding-bottom: 9px;
+    	
+    	li {
+    		list-style: none;
+
+    		span {
+    			color: red;
+    		}
+    	}
+
+    }
+}

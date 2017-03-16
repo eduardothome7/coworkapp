@@ -1,5 +1,12 @@
-<h1>New Room</h1>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
 
-<%= render 'form', room: @room %>
+		<%= render('room_steps/step_progress', :locals => {@step_1 => 'complete', @step_2 => 'disabled', :step_3 => 'disabled', :step_4 => 'disabled' }) %>
+ 		<h3>Cadastrar Espaço</h3>
+		<hr>
+		<%= render 'form', room: @room %>
+	</div>
+</div>
 
-<%= link_to 'Back', rooms_path %>
+
+

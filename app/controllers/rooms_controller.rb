@@ -26,14 +26,11 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
 
-    respond_to do |format|
-      if @room.save
-        format.html { redirect_to @room, notice: 'Room was successfully created.' }
-        format.json { render :show, status: :created, location: @room }
-      else
-        format.html { render :new }
-        format.json { render json: @room.errors, status: :unprocessable_entity }
-      end
+    if @room.save
+      session[:room_id] = @room.id
+      redirect_to room_steps_path 
+    else
+      render :new
     end
   end
 
@@ -42,11 +39,11 @@ class RoomsController < ApplicationController
   def update
     respond_to do |format|
       if @room.update(room_params)
-        format.html { redirect_to @room, notice: 'Room was successfully updated.' }
+        session[:room_id] = @room.id
+        format.html { redirect_to room_steps_path, notice: 'Room was successfully updated.' }
         format.json { render :show, status: :ok, location: @room }
       else
-        format.html { render :edit }
-        format.json { render json: @room.errors, status: :unprocessable_entity }
+        format.html { render render_wizard  }
       end
     end
   end
@@ -69,6 +66,6 @@ class RoomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def room_params
-      params.require(:room).permit(:name, :description, :cep, :address, :n, :ngb, :city, :country, :telephone, :celphone, :picture, :email, :facebook_profile, :instagram_profile, :open_at, :close_at)
+      params.require(:room).permit(:name, :description, :cep, :address, :n, :ngb, :city, :country, :telephone, :celphone, :picture, :email, :facebook_profile, :instagram_profile, :open_at, :close_at, :status)
     end
 end
