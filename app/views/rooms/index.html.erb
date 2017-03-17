@@ -49,6 +49,11 @@
         <td><%= link_to 'Edit', edit_room_path(room) %></td>
         <td><%= link_to 'Destroy', room, method: :delete, data: {confirm: 'Are you sure?', verify: 'Foo', verify_text: 'Digite o nome da Sala para excluir'} %></td>
       </tr>
+      <tr>
+        <% room.images.each do |image| %>
+          <%= image_tag(image.url) %>
+        <% end %>
+      </tr>
     <% end %>
   </tbody>
 </table>

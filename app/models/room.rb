@@ -1,5 +1,7 @@
 class Room < ApplicationRecord
-  mount_uploader :picture, PictureUploader
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+  mount_uploaders :images, PictureUploader
   validates :name, presence: true
   validates :name, uniqueness: true
   validates :description, presence: true

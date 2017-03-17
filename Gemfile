@@ -28,6 +28,7 @@ gem 'data-confirm-modal'
 gem 'wicked'
 gem 'momentjs-rails'
 gem 'bootstrap3-datetimepicker-rails'
+gem 'friendly_id'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
