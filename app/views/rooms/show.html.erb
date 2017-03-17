@@ -50,11 +50,10 @@
   <%= @room.celphone %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Picture:</strong>
-  <%= image_tag(@room.picture_url) if @room.picture.present? %>
 </p>
-
+ -->
 <p>
   <strong>Email:</strong>
   <%= @room.email %>
@@ -81,4 +80,17 @@
 </p>
 
 <%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+
+<h4>Galeria</h4>
+<hr>
+<% if @room.photos.any? %>
+  <% @room.photos.order('created_at').each do |photo| %>
+    <%= image_tag(photo.url) %>
+  <% end %>
+<% else %>
+  <div class="box_info">
+
+  </div>
+<% end %>
+
+<%= link_to 'Adicionar Imagem', new_room_photo_path(@room), class: 'btn btn-default' %>

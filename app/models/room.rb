@@ -1,7 +1,6 @@
 class Room < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: :slugged
-  mount_uploaders :images, PictureUploader
   validates :name, presence: true
   validates :name, uniqueness: true
   validates :description, presence: true
@@ -15,6 +14,7 @@ class Room < ApplicationRecord
   validates :telephone, presence: true, :if => :active_or_location?
   validates :celphone, presence: true, :if => :active_or_location?
   after_create :set_active
+  has_many :photos
 
   def set_active
   	active = true

@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		  <%= render('room_steps/step_progress', :locals => {@step_1 => 'complete', @step_2 => 'complete', :step_3 => 'complete', :step_4 => 'disabled' }) %>
+
+
+  <p>Pronto! Você acaba de cadastra seu Espaço Cowork!</p>
+  <p>Agora você pode <%= link_to "adicionar fotos para o álbum da sala", new_room_photo_path(@room) %>!</p>
+  Ou, pode <%= link_to "deixar para depois", next_wizard_path %> e visualizar seu Espaço.
+
+
+   <%= link_to 'Voltar', previous_wizard_path %>
+   
+ </div>
+</div>

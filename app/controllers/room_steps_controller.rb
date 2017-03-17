@@ -1,7 +1,7 @@
 class RoomStepsController < ApplicationController
   
   include Wicked::Wizard
-  steps :location, :contact
+  steps :location, :contact, :finish
   # before_action :set_room
 
   def show

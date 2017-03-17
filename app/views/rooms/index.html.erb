@@ -38,7 +38,6 @@
         <td><%= room.country %></td>
         <td><%= room.telephone %></td>
         <td><%= room.celphone %></td>
-        <td><%= room.picture %></td>
         <td><%= room.email %></td>
         <td><%= room.facebook_profile %></td>
         <td><%= room.instagram_profile %></td>
@@ -48,12 +47,7 @@
         <td><%= link_to 'Show', room %></td>
         <td><%= link_to 'Edit', edit_room_path(room) %></td>
         <td><%= link_to 'Destroy', room, method: :delete, data: {confirm: 'Are you sure?', verify: 'Foo', verify_text: 'Digite o nome da Sala para excluir'} %></td>
-      </tr>
-      <tr>
-        <% room.images.each do |image| %>
-          <%= image_tag(image.url) %>
-        <% end %>
-      </tr>
+      </tr>    
     <% end %>
   </tbody>
 </table>

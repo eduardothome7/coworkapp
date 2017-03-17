@@ -1,0 +1,32 @@
+<%= form_for([photo.room, photo], :multipart => 'true') do |f| %>
+  <% if photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
+
+      <ul>
+      <% photo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label "Título" %>
+    <%= f.text_field :title, class: 'form-control', placeholder: 'Título da imagem' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Legenda" %>
+    <%= f.text_area :description, class: 'form-control', placeholder: 'Inclua uma legenda ou uma breve descrição da imagem' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :importe_a_imagem %>
+    <%= f.file_field :url %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Publicar", class: 'btn btn-primary' %>
+  </div>
+<% end %>
