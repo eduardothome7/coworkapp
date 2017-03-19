@@ -17,6 +17,8 @@
 //= require data-confirm-modal
 //= require moment
 //= require bootstrap-datetimepicker
+//= require jquery.jcrop
+//= require papercrop
 //= require_tree .
 
 $(document).ready(function() {
@@ -63,6 +65,8 @@ $(document).ready(function() {
 
     });
 
+
+    var cropperHeader = new Croppic('yourId');
 
 
 });

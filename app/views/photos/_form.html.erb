@@ -26,6 +26,11 @@
     <%= f.file_field :url %>
   </div>
 
+  <%= f.cropbox :url %>
+  <%= f.crop_preview :url %>
+
+  <div id="yourId"></div>
+
   <div class="actions">
     <%= f.submit "Publicar", class: 'btn btn-primary' %>
   </div>

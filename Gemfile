@@ -29,6 +29,9 @@ gem 'wicked'
 gem 'momentjs-rails'
 gem 'bootstrap3-datetimepicker-rails'
 gem 'friendly_id'
+gem 'jcrop-rails-v2'
+gem 'papercrop'
+gem "mini_magick"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
