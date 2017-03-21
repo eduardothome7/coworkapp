@@ -17,8 +17,7 @@
 //= require data-confirm-modal
 //= require moment
 //= require bootstrap-datetimepicker
-//= require jquery.jcrop
-//= require papercrop
+//= require cropbox-min
 //= require_tree .
 
 $(document).ready(function() {
@@ -65,8 +64,43 @@ $(document).ready(function() {
 
     });
 
+    var options =
+    {
+        thumbBox: '.thumbBox',
+        spinner: '.spinner',
+        imgSrc: '/assets/default.png'
+     }
+ 
+    var cropper;
 
-    var cropperHeader = new Croppic('yourId');
+    $(".input-img").on('change', function(){
+         var reader = new FileReader();
+         reader.onload = function(e) {
+             options.imgSrc = e.target.result;
+             cropper = $('#avatarBox').cropbox(options);
+         }
+         reader.readAsDataURL(this.files[0]);
+         this.files = [];
+    });
 
+    $('.btnCrop').on('click', function(){
+        var img = cropper.getDataURL();
+ 
+        // Place the cropped image's datafile.
+        $('.croppedAvatar').html('<img src="'+img+'" width="100%">');
+ 
+        //atualiza o campo hidden field com os dados da imagem cortada
+        $('#avatar').attr('src', img);        
+        $('#picture_datafile').val(img);  
+        console.log($('#picture_datafile').val());     
+    });
+ 
+    $('.btnZoomIn').on('click', function(){        
+      cropper.zoomIn();         
+    });
+ 
+    $('.btnZoomOut').on('click', function(){         
+      cropper.zoomOut();         
+    });
 
 });

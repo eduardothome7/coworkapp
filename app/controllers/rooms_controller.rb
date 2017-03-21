@@ -37,6 +37,7 @@ class RoomsController < ApplicationController
   # PATCH/PUT /rooms/1
   # PATCH/PUT /rooms/1.json
   def update
+    @room.status = step
     respond_to do |format|
       if @room.update(room_params)
         session[:room_id] = @room.id

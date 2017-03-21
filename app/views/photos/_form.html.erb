@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label "Título" %>
+    <%= f.label "Título *" %>
     <%= f.text_field :title, class: 'form-control', placeholder: 'Título da imagem' %>
   </div>
 
@@ -21,17 +21,39 @@
     <%= f.text_area :description, class: 'form-control', placeholder: 'Inclua uma legenda ou uma breve descrição da imagem' %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :importe_a_imagem %>
-    <%= f.file_field :url %>
+  <div class="file_box">
+    <%= hidden_field_tag :picture_datafile, id: 'avatar_datafile' %>
+    <div class="form-group">
+      <%= f.label :selecione_uma_image %>
+      <%= f.file_field :picture, class: 'input-img' %>
+    </div>
   </div>
 
-  <%= f.cropbox :url %>
-  <%= f.crop_preview :url %>
+   <div class="row form-set">
+      <div class="col-md-6">
+ 
+          <div class="imageBox" id="avatarBox">
+              <div class="thumbBox"></div>
+              <div class="spinner" style="display: none">
+               Loading...
+              </div>
+          </div>
+ 
+          <div class="action">
+              <input type="button" id="btnZoomIn" class="btnZoomIn avatar btn btn-default" value="+">
+              <input type="button" id="btnZoomOut" class="btnZoomOut avatar btn btn-default" value="-">
+              <input type="button" id="btnCrop" class="btnCrop avatar btn btn-default" value="Crop">
+          </div>
+      </div>
+    </div>
 
-  <div id="yourId"></div>
 
-  <div class="actions">
-    <%= f.submit "Publicar", class: 'btn btn-primary' %>
+   <div class="form-group">
+    <div class="row">      
+      <div class="col-md-3 col-md-offset-9">
+        <%= f.submit 'Publicar imagem', class: 'btn btn-primary btn-block' %>
+      </div>
+    </div>
   </div>
+
 <% end %>

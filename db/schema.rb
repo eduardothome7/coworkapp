@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170317015759) do
+ActiveRecord::Schema.define(version: 20170320152253) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20170317015759) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "picture"
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -49,11 +50,20 @@ ActiveRecord::Schema.define(version: 20170317015759) do
     t.string   "instagram_profile"
     t.datetime "open_at"
     t.datetime "close_at"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.         "active"
     t.string   "status"
     t.string   "slug"
+    t.string   "url_file_name"
+    t.string   "url_content_type"
+    t.integer  "url_file_size"
+    t.datetime "url_updated_at"
+    t.string   "avatar"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.index ["slug"], name: "index_rooms_on_slug", unique: true
   end
 

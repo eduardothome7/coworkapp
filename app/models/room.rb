@@ -25,7 +25,7 @@ class Room < ApplicationRecord
   end
 
   def active_or_location?
-    name.include?('location')
+    status.include?('location')
   end
 
 end

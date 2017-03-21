@@ -20,9 +20,8 @@
         <td><%= photo.title %></td>
         <td><%= photo.url %></td>
         <td><%= photo.description %></td>
-        <td><%= link_to 'Show', photo %></td>
-        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_room_photo_path([photo.room, photo]) %></td>
+        <td><%= link_to 'Destroy', [photo.room, photo], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Photo', new_photo_path %>
+<%= link_to 'New Photo', new_room_photo_path(@room) %>
