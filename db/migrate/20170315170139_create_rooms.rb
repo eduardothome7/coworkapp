@@ -17,7 +17,9 @@ class CreateRooms < ActiveRecord::Migration[5.0]
       t.string :instagram_profile
       t.datetime :open_at
       t.datetime :close_at
-
+      t.string :cover
+      t.string :status
+      t.bool :active
       t.timestamps
     end
   end

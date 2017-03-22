@@ -5,7 +5,7 @@ class CreatePhotos < ActiveRecord::Migration[5.0]
       t.string :title
       t.string :url
       t.text :description
-
+      t.string :picture
       t.timestamps
     end
   end
