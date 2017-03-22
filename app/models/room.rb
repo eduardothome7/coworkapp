@@ -4,17 +4,21 @@ class Room < ApplicationRecord
   validates :name, presence: true
   validates :name, uniqueness: true
   validates :description, presence: true
+  
   validates :address, presence: true, :if => :active?
   validates :cep, presence: true, :if => :active?
   validates :n, presence: true, :if => :active?
   validates :country, presence: true, :if => :active?
   validates :city, presence: true, :if => :active?
   validates :ngb, presence: true, :if => :active?
-  validates :email, presence: true, :if => :active_or_location?
-  validates :telephone, presence: true, :if => :active_or_location?
-  validates :celphone, presence: true, :if => :active_or_location?
+
+  validates :email, presence: true, :if => :timetable?
+  validates :telephone, presence: true, :if => :timetable?
+  validates :celphone, presence: true, :if => :timetable?
+
   after_create :set_active
   has_many :photos
+  mount_uploader :cover, PictureUploader  
 
   def set_active
   	active = true
@@ -27,5 +31,14 @@ class Room < ApplicationRecord
   def active_or_location?
     status.include?('location')
   end
+
+  def timetable?
+    # status.include?('contact')
+  end
+
+  def contact?
+    # status.include?('contact')
+  end
+
 
 end

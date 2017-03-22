@@ -1,0 +1,14 @@
+<h4>Galeria</h4>
+<hr>
+<% if photos? %> 
+  <% photos.order('created_at').each do |photo| %>
+  <%= photo.picture %>
+    <%= image_tag(photo.picture) %>
+  <% end %>
+<% else %>
+  <div class="box_info">
+
+  </div>
+<% end %>
+
+<%= link_to 'Adicionar Imagem', new_room_photo_path(@room), class: 'btn btn-default' %>

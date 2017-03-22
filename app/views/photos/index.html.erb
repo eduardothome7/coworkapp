@@ -20,8 +20,8 @@
         <td><%= photo.title %></td>
         <td><%= photo.url %></td>
         <td><%= photo.description %></td>
-        <td><%= link_to 'Edit', edit_room_photo_path([photo.room, photo]) %></td>
-        <td><%= link_to 'Destroy', [photo.room, photo], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_room_photo_path(photo.room, photo) %></td>
+        <td><%= link_to 'Destroy', [photo.room, photo], method: :delete, remote: true, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

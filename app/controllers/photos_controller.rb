@@ -26,11 +26,9 @@ class PhotosController < ApplicationController
   # POST /photos.json
   def create
     @photo = @room.photos.new(photo_params)
-    @photo.picture = convert_data_uri_to_upload(params[:picture_datafile])
-    # @photo.avatar = convert_data_uri_to_upload(params[:avatar])
+    @photo.picture = convert_data_uri_to_upload(params[:picture_datafile]) if params[:picture_datafile].length > 100
     if @photo.save
       redirect_to [@photo.room], notice: 'Photo was successfully created.' 
-      # render :action => "crop"
     else
       render :new 
     end
@@ -55,7 +53,8 @@ class PhotosController < ApplicationController
   def destroy
     @photo.destroy
     respond_to do |format|
-      format.html { redirect_to photos_url, notice: 'Photo was successfully destroyed.' }
+      format.html { redirect_to room_photos_path(@room), notice: 'Foto excluída com sucesso!' }
+      format.js 
       format.json { head :no_content }
     end
   end

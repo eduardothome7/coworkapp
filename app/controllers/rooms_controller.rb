@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   before_action :set_room, only: [:show, :edit, :update, :destroy]
-
+  layout :set_layout
   # GET /rooms
   # GET /rooms.json
   def index
@@ -37,7 +37,6 @@ class RoomsController < ApplicationController
   # PATCH/PUT /rooms/1
   # PATCH/PUT /rooms/1.json
   def update
-    @room.status = step
     respond_to do |format|
       if @room.update(room_params)
         session[:room_id] = @room.id
@@ -65,8 +64,17 @@ class RoomsController < ApplicationController
       @room = Room.friendly.find(params[:id])
     end
 
+    def set_layout
+      case action_name
+        when "show"
+          "room"
+        else
+          "application"
+      end
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def room_params
-      params.require(:room).permit(:name, :description, :cep, :address, :n, :ngb, :city, :country, :telephone, :celphone, :picture, :email, :facebook_profile, :instagram_profile, :open_at, :close_at, :status)
+      params.require(:room).permit(:name, :description, :cep, :address, :n, :ngb, :city, :country, :telephone, :celphone, :picture, :email, :cover, :facebook_profile, :instagram_profile, :open_at, :close_at, :status)
     end
 end

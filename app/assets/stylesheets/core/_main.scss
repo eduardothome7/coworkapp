@@ -1,7 +1,13 @@
-@import "bs_wizard";
 @import "variables";
 @import "forms";
 
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
 
 
 .room {
@@ -12,5 +18,139 @@
 
 }
 
+section {
+	padding-bottom: 4%;
+}
+
+section#cover {
+	height: 30em;
+
+	.info {
+		position: relative;
+
+		h1, h2, h3, h4 {
+		    position: absolute;
+		    color: #fff;
+		    top: 15em;
+		}
+
+		.btn {
+			position: absolute;
+		    top: 27em;
+		    right: 5px;
+		}
+
+		a {
+			position: absolute;
+			right: 5px;
+		}
+	}
+}
+
+section#gallery {
+	background: #f0f0f0;
+	border-bottom: 1px solid #e1e1e1;
+	border-top: 1px solid #e1e1e1;
+}
+
+p.description {
+	color: #777;
+}
+
+#notice {
+	color: green;
+    text-align: center;
+}
 
 
+.img_gallery {
+	
+	img {
+		height: auto;
+		display: block;
+	}
+
+	.overlay {
+	  position: absolute;
+	  bottom: 0;
+	  left: 100%;
+	  right: 0;
+	  background-color: #008CBA;
+	  overflow: hidden;
+	  width: 0;
+	  height: 100%;
+	  transition: .5s ease;
+	}
+
+	&:hover .overlay {
+	  width: 100%;
+	  left: 0;
+	}
+}
+
+#mainNav {
+	background: #2c3e50;
+	border: 1px solid #34495e;
+
+
+	a {
+		color: #768798;	
+		
+		&:hover {
+			color: #fff;
+		}
+
+	}
+
+	.navbar-form {
+
+		.form-group {
+			position: relative;
+		}
+		
+		input[type=text] {
+			border: none;
+			background: #34495e;	
+		}
+
+		button[type=submit] {
+			position: absolute;
+		    top: 2px;
+		    right: -4px;
+		    border: 0;
+		    background: none;
+		    color: #fff;
+		}
+	
+	}
+
+
+}
+
+
+.img_gallery {
+	
+	position: relative;
+	margin-top: 16px;
+
+	.btn {
+		position: absolute;
+	    top: 6px;
+	    right: 20px;
+	}
+
+}
+
+.box_col {
+	margin-top: 16px;
+	background: #fff;
+	height: 200px;
+	position: relative;
+
+	.btn {
+		position: absolute;
+		bottom: 12px;
+		width: 92%;
+	}
+
+}

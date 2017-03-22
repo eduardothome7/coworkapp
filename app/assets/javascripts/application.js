@@ -18,6 +18,7 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require cropbox-min
+//= require lightbox
 //= require_tree .
 
 $(document).ready(function() {
@@ -66,7 +67,7 @@ $(document).ready(function() {
 
     var options =
     {
-        thumbBox: '.thumbBox',
+        thumbBox: '.thumbBox, .coverBox',
         spinner: '.spinner',
         imgSrc: '/assets/default.png'
      }
@@ -85,7 +86,6 @@ $(document).ready(function() {
 
     $('.btnCrop').on('click', function(){
         var img = cropper.getDataURL();
- 
         // Place the cropped image's datafile.
         $('.croppedAvatar').html('<img src="'+img+'" width="100%">');
  

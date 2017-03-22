@@ -1,0 +1,44 @@
+<%= render 'layouts/header' %>
+  <body>
+    <%= render 'layouts/navbar' %>
+    <section id="cover" style="background: url(<%= @room.cover_url %>)">
+      <div class="container info">
+        <%= link_to 'alterar imagem de capa', '/room_steps/cover', :room_id => @room.id %>
+        <h3><%= @room.name.titleize %></h3> <%= link_to edit_room_path(@room), class: 'btn btn-default' do %> <span class="glyphicon glyphicon-cog"></span> Editar Informações <% end %> 
+      </div>
+    </section>
+  
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+
+    <section id="gallery">
+      <div class="container">
+        <h4>Galeria</h4>
+        <hr>
+        <% if @room.photos.any? %> 
+          <div class="row ">
+            <% @room.photos.order('created_at').each do |photo| %>
+              <div id="img_<%= photo.id %>" class="col-md-4 img_gallery">
+                <a href="<%= photo.picture_url %>" rel="lightbox" data-lightbox="room-gallery"><%= image_tag(photo.picture.thumbnail) %></a>
+                <%= link_to [photo.room, photo], method: :delete, remote: true, data: {confirm: 'Deseja realmente excluir a imagem '}, class: 'btn btn-default' do %> <span class="glyphicon glyphicon-trash"></span><% end %>
+              </div>
+            <% end %>
+            <div class="col-md-4 box_col">
+              <%= link_to 'Adicionar Imagem', new_room_photo_path(@room), class: 'btn btn-default btn-block' %>
+            </div>
+          </div>
+        <% else %>
+        <div class="box_info">
+          
+        </div>
+        <% end %>
+        
+
+      </div>
+    </section>
+
+
+
+  </body>  
+</html>

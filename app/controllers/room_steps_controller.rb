@@ -1,7 +1,7 @@
 class RoomStepsController < ApplicationController
   
   include Wicked::Wizard
-  steps :location, :contact, :finish
+  steps :location, :timetable, :contact, :cover, :finish
   # before_action :set_room
 
   def show
@@ -11,7 +11,8 @@ class RoomStepsController < ApplicationController
 
   def update
     @room = Room.find(session[:room_id])
-    # params[:room][:name] = steps
+    @room.cover = convert_data_uri_to_upload(params[:picture_datafile])
+    params[:room][:status] = step
     @room.update(room_params)
     render_wizard @room
   end
@@ -23,7 +24,7 @@ class RoomStepsController < ApplicationController
   end
 
   def room_params
-    params.require(:room).permit(:name, :description, :cep, :address, :n, :ngb, :city, :country, :telephone, :celphone, :picture, :email, :facebook_profile, :instagram_profile, :open_at, :close_at, :status)
+    params.require(:room).permit(:name, :description, :cep, :address, :n, :ngb, :city, :country, :telephone, :celphone, :picture, :email, :facebook_profile, :instagram_profile, :open_at, :close_at, :status, :cover)
   end
 
 end

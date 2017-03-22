@@ -11,28 +11,18 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label "Título *" %>
-    <%= f.text_field :title, class: 'form-control', placeholder: 'Título da imagem' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label "Legenda" %>
-    <%= f.text_area :description, class: 'form-control', placeholder: 'Inclua uma legenda ou uma breve descrição da imagem' %>
-  </div>
-
-  <div class="file_box">
-    <%= hidden_field_tag :picture_datafile, id: 'avatar_datafile' %>
-    <div class="form-group">
-      <%= f.label :selecione_uma_image %>
-      <%= f.file_field :picture, class: 'input-img' %>
-    </div>
-  </div>
+  <%= hidden_field_tag :picture_datafile, id: 'picture_datafile' %>
 
    <div class="row form-set">
-      <div class="col-md-6">
+      <div class="col-md-12">
  
           <div class="imageBox" id="avatarBox">
+              
+              <div class="form-group">
+                <%= f.label :selecione_uma_image %>
+                <%= f.file_field :picture, class: 'input-img' %>
+              </div>
+              
               <div class="thumbBox"></div>
               <div class="spinner" style="display: none">
                Loading...
@@ -42,10 +32,21 @@
           <div class="action">
               <input type="button" id="btnZoomIn" class="btnZoomIn avatar btn btn-default" value="+">
               <input type="button" id="btnZoomOut" class="btnZoomOut avatar btn btn-default" value="-">
-              <input type="button" id="btnCrop" class="btnCrop avatar btn btn-default" value="Crop">
+              <button type="button" id="btnCrop" class="btnCrop avatar btn btn-default"><i class="fa fa-crop" aria-hidden="true"></i> </button>
           </div>
       </div>
-    </div>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <%= f.label "Título *" %>
+    <%= f.text_field :title, class: 'form-control', placeholder: 'Título da imagem' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Legenda" %>
+    <%= f.text_area :description, class: 'form-control', placeholder: 'Inclua uma legenda ou uma breve descrição da imagem' %>
+  </div>
 
 
    <div class="form-group">
