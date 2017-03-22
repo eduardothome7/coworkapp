@@ -21,6 +21,7 @@ class CreateRooms < ActiveRecord::Migration[5.0]
       t.string :address
       t.string :slug
       t.boolean :active
+      t.string :status
       t.timestamps
     end
   end
