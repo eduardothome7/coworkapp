@@ -20,6 +20,7 @@ section {
 
 section#cover {
 	height: 30em;
+	background: #e7e7e7;
 
 	.info {
 		position: relative;
@@ -129,12 +130,27 @@ p.description {
 	position: relative;
 	margin-top: 16px;
 
-	.btn {
+	.actions {
 		position: absolute;
-	    top: 6px;
-	    right: 20px;
-	}
+	    top: 2px;
+	    right: 19px;
 
+	    .btn {
+		   	border: none;
+		    color: #5f5c5c;
+		    font-size: 1.5em;
+		    padding-top: 8px;
+		    background: rgba(0, 0, 0, 0.7);
+		    border-radius: 0;
+		    margin-top: 2px;
+
+		    &:hover, &:active, &:focus {
+		    	background: rgba(0,0,0,0.9)
+		    }
+		}
+
+	}
+	
 }
 
 .box_col {

@@ -13034,344 +13034,240 @@ button.close {
   border: 0;
 }
 
-/* jquery.Jcrop.css v0.9.10 - MIT License */
-/*
-  The outer-most container in a typical Jcrop instance
-  If you are having difficulty with formatting related to styles
-  on a parent element, place any fixes here or in a like selector
-
-  You can also style this element if you want to add a border, etc
-  A better method for styling can be seen below with .jcrop-light
-  (Add a class to the holder and style elements for that extended class)
-*/
-/* line 12, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-holder {
-  direction: ltr;
-  text-align: left;
+/* Preload images */
+/* line 2, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+body:after {
+  content: url("/assets/lightbox/close-5d62e6c90005bfb71f6abb440f9e4753681cb23bbd5e60477ab6f442d2f0e69c.png") url("/assets/lightbox/loading-225aa88b6ab02c06222ec9468d62e15fa188e39cdb9431d1f55401ad380753ed.gif") url("/assets/lightbox/prev-7fd9273f20fdb1229c224341271a119020a5eee74ccf6b4605730917c864caf2.png") url("/assets/lightbox/next-15b869b02c6fbaa8c6c26445a2dd2d9bad80fd27b1409f8179e5dd89dc89d90a.png");
+  display: none;
 }
 
-/* These styles define the border lines */
-/* line 18, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-vline, .jcrop-hline {
-  background: #FFF url(Jcrop.gif) top left repeat;
-  font-size: 0;
+/* line 7, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+body.lb-disable-scrolling {
+  overflow: hidden;
+}
+
+/* line 11, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lightboxOverlay {
   position: absolute;
-}
-
-/* line 19, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-vline {
-  height: 100%;
-  width: 1px !important;
-}
-
-/* line 20, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-hline {
-  height: 1px !important;
-  width: 100%;
-}
-
-/* line 21, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-vline.right {
-  right: 0;
-}
-
-/* line 22, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-hline.bottom {
-  bottom: 0;
-}
-
-/* Handle style - size is set by Jcrop handleSize option (currently) */
-/* line 25, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-handle {
-  background-color: #333;
-  border: 1px #eee solid;
-  font-size: 1px;
-}
-
-/* This style is used for invisible click targets */
-/* line 28, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-tracker {
-  height: 100%;
-  width: 100%;
-  -webkit-tap-highlight-color: transparent;
-  /* "turn off" link highlight */
-  -webkit-touch-callout: none;
-  /* disable callout, image save panel */
-  -webkit-user-select: none;
-  /* disable cut copy paste */
-}
-
-/* Positioning of handles and drag bars */
-/* line 38, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-handle.ord-n {
-  left: 50%;
-  margin-left: -4px;
-  margin-top: -4px;
   top: 0;
-}
-
-/* line 39, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-handle.ord-s {
-  bottom: 0;
-  left: 50%;
-  margin-bottom: -4px;
-  margin-left: -4px;
-}
-
-/* line 40, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-handle.ord-e {
-  margin-right: -4px;
-  margin-top: -4px;
-  right: 0;
-  top: 50%;
-}
-
-/* line 41, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-handle.ord-w {
   left: 0;
-  margin-left: -4px;
-  margin-top: -4px;
-  top: 50%;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none;
 }
 
-/* line 42, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-handle.ord-nw {
+/* line 22, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lightbox {
+  position: absolute;
   left: 0;
-  margin-left: -4px;
-  margin-top: -4px;
-  top: 0;
-}
-
-/* line 43, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-handle.ord-ne {
-  margin-right: -4px;
-  margin-top: -4px;
-  right: 0;
-  top: 0;
-}
-
-/* line 44, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-handle.ord-se {
-  bottom: 0;
-  margin-bottom: -4px;
-  margin-right: -4px;
-  right: 0;
-}
-
-/* line 45, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-handle.ord-sw {
-  bottom: 0;
-  left: 0;
-  margin-bottom: -4px;
-  margin-left: -4px;
-}
-
-/* line 46, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-dragbar.ord-n, .jcrop-dragbar.ord-s {
-  height: 7px;
   width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
 }
 
-/* line 47, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-dragbar.ord-e, .jcrop-dragbar.ord-w {
-  height: 100%;
-  width: 7px;
-}
-
-/* line 48, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-dragbar.ord-n {
-  margin-top: -4px;
-}
-
-/* line 49, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-dragbar.ord-s {
-  bottom: 0;
-  margin-bottom: -4px;
-}
-
-/* line 50, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-dragbar.ord-e {
-  margin-right: -4px;
-  right: 0;
-}
-
-/* line 51, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-dragbar.ord-w {
-  margin-left: -4px;
-}
-
-/* The "jcrop-light" class/extension */
-/* line 54, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-light .jcrop-vline, .jcrop-light .jcrop-hline {
-  background: #FFF;
-  filter: Alpha(opacity=70) !important;
-  opacity: 0.7 !important;
-}
-
-/* line 60, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-light .jcrop-handle {
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  background-color: #000;
-  border-color: #FFF;
+/* line 32, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
   border-radius: 3px;
 }
 
-/* The "jcrop-dark" class/extension */
-/* line 70, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-dark .jcrop-vline, .jcrop-dark .jcrop-hline {
-  background: #000;
-  filter: Alpha(opacity=70) !important;
-  opacity: 0.7 !important;
+/* line 39, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lightbox a img {
+  border: none;
 }
 
-/* line 76, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-dark .jcrop-handle {
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  background-color: #FFF;
-  border-color: #000;
-  border-radius: 3px;
-}
-
-/* Fix for twitter bootstrap et al. */
-/* line 86, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/papercrop-0.3.0/vendor/assets/stylesheets/jquery.jcrop.css */
-.jcrop-holder img, img.jcrop-preview {
-  max-width: none;
-}
-
-/* line 1, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard {
-  margin-top: 40px;
-}
-
-/*Form Wizard*/
-/* line 4, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard {
-  border-bottom: solid 1px #e0e0e0;
-  padding: 0 0 10px 0;
-}
-
-/* line 5, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step {
-  padding: 0;
+/* line 43, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-outerContainer {
   position: relative;
+  background-color: white;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 4px;
 }
 
-/* line 7, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
-  color: #999999;
-  font-size: 16px;
-  margin-bottom: 5px;
+/* line 53, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/* line 8, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step .bs-wizard-stepnum .active {
-  color: #666666;
-  font-size: 16px;
+/* line 59, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-container {
+  padding: 4px;
 }
 
-/* line 9, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step .bs-wizard-stepnum .disabled {
-  color: #999999;
-  font-size: 16px;
-}
-
-/* line 10, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step .bs-wizard-info {
-  color: #999;
-  font-size: 14px;
-}
-
-/* line 11, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+/* line 63, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-loader {
   position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+/* line 73, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url("/assets/lightbox/loading-225aa88b6ab02c06222ec9468d62e15fa188e39cdb9431d1f55401ad380753ed.gif") no-repeat;
+}
+
+/* line 81, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+/* line 90, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-container > .nav {
+  left: 0;
+}
+
+/* line 94, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-nav a {
+  outline: none;
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
+}
+
+/* line 99, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+/* line 105, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url("/assets/lightbox/prev-7fd9273f20fdb1229c224341271a119020a5eee74ccf6b4605730917c864caf2.png") left 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+/* line 118, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 123, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url("/assets/lightbox/next-15b869b02c6fbaa8c6c26445a2dd2d9bad80fd27b1409f8179e5dd89dc89d90a.png") right 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+/* line 136, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 141, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 154, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 160, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-data {
+  padding: 0 4px;
+  color: #ccc;
+}
+
+/* line 165, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+
+/* line 172, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+/* line 178, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 12px;
+  color: #999999;
+}
+
+/* line 186, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-data .lb-close {
+  display: block;
+  float: right;
   width: 30px;
   height: 30px;
-  display: block;
-  background: #fbe8aa;
-  top: 45px;
-  left: 50%;
-  margin-top: -15px;
-  margin-left: -15px;
-  border-radius: 50%;
+  background: url("/assets/lightbox/close-5d62e6c90005bfb71f6abb440f9e4753681cb23bbd5e60477ab6f442d2f0e69c.png") top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
-/* line 12, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {
-  content: ' ';
-  width: 14px;
-  height: 14px;
-  background: #fbbd19;
-  border-radius: 50px;
-  position: absolute;
-  top: 8px;
-  left: 8px;
+/* line 202, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 
-/* line 13, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step > .progress {
-  position: relative;
-  border-radius: 0px;
-  height: 8px;
-  box-shadow: none;
-  margin: 20px 0;
-}
-
-/* line 14, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step > .progress > .progress-bar {
-  width: 0px;
-  box-shadow: none;
-  background: #fbe8aa;
-}
-
-/* line 15, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
-  width: 100%;
-}
-
-/* line 16, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {
-  width: 50%;
-}
-
-/* line 17, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
-  width: 0%;
-}
-
-/* line 18, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
-  width: 100%;
-}
-
-/* line 19, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
-  background-color: #f5f5f5;
-}
-
-/* line 20, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
-  opacity: 0;
-}
-
-/* line 21, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step:first-child > .progress {
-  left: 50%;
-  width: 50%;
-}
-
-/* line 22, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step:last-child > .progress {
-  width: 50%;
-}
-
-/* line 23, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_bs_wizard.scss */
-.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
-  pointer-events: none;
-}
-
-/*END Form Wizard*/
 /* line 1, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .form-control {
   border-radius: 0;
@@ -13411,9 +13307,263 @@ button.close {
   color: red;
 }
 
-/* line 7, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 43, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+.file_box {
+  background: #f5f5f5;
+  margin-top: 2.5rem;
+  padding: 6.25rem 1.25rem;
+  margin-bottom: 30px;
+}
+
+/* line 50, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+.imageBox {
+  position: relative;
+  height: 628px;
+  width: 100%;
+  border: 1px solid #aaa;
+  background: #fff;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  cursor: move;
+}
+/* line 60, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+.imageBox .form-group {
+  position: absolute;
+  top: 20em;
+  left: 36em;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 13px;
+}
+
+/* line 71, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+.action {
+  text-align: center;
+  padding-top: 5px;
+  position: absolute;
+  top: 37px;
+  right: 211px;
+  text-align: center;
+}
+
+/* line 80, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+.imageBox .thumbBox {
+  position: absolute;
+  top: 137px;
+  left: 16em;
+  width: 79%;
+  height: 92%;
+  margin-top: -100px;
+  margin-left: -100px;
+  border: 1px solid #666666;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  background: none repeat scroll 0% 0% transparent;
+}
+
+/* line 93, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+.imageBox .coverBox {
+  position: absolute;
+  top: 287px;
+  left: 9em;
+  width: 94%;
+  height: 46%;
+  margin-top: -100px;
+  margin-left: -100px;
+  border: 1px solid #666666;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  background: none repeat scroll 0% 0% transparent;
+}
+
+/* line 106, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+.imageBox .spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  line-height: 400px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* line 117, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+.cropped {
+  border: 1px solid #d3d3d3;
+  height: 400px;
+  width: 400px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 126, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+#cropMsg {
+  display: none;
+  position: absolute;
+  top: 5em;
+  left: 37%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 18px;
+  font-size: 1.2em;
+}
+
+/* line 5, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+body.application {
+  padding-top: 4em;
+}
+
+/* line 9, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 .room {
   position: relative;
   background: #fbfbfb;
   margin-top: 5px;
+}
+
+/* line 17, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+section {
+  padding-bottom: 4%;
+}
+
+/* line 21, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+section#cover {
+  height: 30em;
+  background: #e7e7e7;
+}
+/* line 25, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+section#cover .info {
+  position: relative;
+}
+/* line 28, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+section#cover .info h1, section#cover .info h2, section#cover .info h3, section#cover .info h4 {
+  position: absolute;
+  color: #fff;
+  top: 15em;
+}
+/* line 34, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+section#cover .info .btn {
+  position: absolute;
+  top: 27em;
+  right: 5px;
+}
+/* line 40, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+section#cover .info a {
+  position: absolute;
+  right: 5px;
+}
+
+/* line 47, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+section#gallery {
+  background: #f0f0f0;
+  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;
+}
+
+/* line 53, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+p.description {
+  color: #777;
+}
+
+/* line 57, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#notice {
+  color: green;
+  text-align: center;
+}
+
+/* line 65, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.img_gallery img {
+  height: auto;
+  display: block;
+}
+/* line 70, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.img_gallery .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+/* line 82, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.img_gallery:hover .overlay {
+  width: 100%;
+  left: 0;
+}
+
+/* line 88, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#mainNav {
+  background: #2c3e50;
+  border: 1px solid #34495e;
+}
+/* line 93, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#mainNav a {
+  color: #768798;
+}
+/* line 96, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#mainNav a:hover {
+  color: #fff;
+}
+/* line 104, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#mainNav .navbar-form .form-group {
+  position: relative;
+}
+/* line 108, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#mainNav .navbar-form input[type=text] {
+  border: none;
+  background: #34495e;
+}
+/* line 113, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#mainNav .navbar-form button[type=submit] {
+  position: absolute;
+  top: 2px;
+  right: -4px;
+  border: 0;
+  background: none;
+  color: #fff;
+}
+
+/* line 128, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.img_gallery {
+  position: relative;
+  margin-top: 16px;
+}
+/* line 133, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.img_gallery .actions {
+  position: absolute;
+  top: 2px;
+  right: 19px;
+}
+/* line 138, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.img_gallery .actions .btn {
+  border: none;
+  color: #5f5c5c;
+  font-size: 1.5em;
+  padding-top: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  margin-top: 2px;
+}
+/* line 147, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.img_gallery .actions .btn:hover, .img_gallery .actions .btn:active, .img_gallery .actions .btn:focus {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* line 156, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.box_col {
+  margin-top: 16px;
+  background: #fff;
+  height: 200px;
+  position: relative;
+}
+/* line 162, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.box_col .btn {
+  position: absolute;
+  bottom: 12px;
+  width: 92%;
 }

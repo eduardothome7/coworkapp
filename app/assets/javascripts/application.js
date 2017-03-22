@@ -75,13 +75,14 @@ $(document).ready(function() {
     var cropper;
 
     $(".input-img").on('change', function(){
-         var reader = new FileReader();
-         reader.onload = function(e) {
-             options.imgSrc = e.target.result;
-             cropper = $('#avatarBox').cropbox(options);
-         }
-         reader.readAsDataURL(this.files[0]);
-         this.files = [];
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          options.imgSrc = e.target.result;
+          cropper = $('#avatarBox').cropbox(options);
+        }
+        reader.readAsDataURL(this.files[0]);
+        this.files = [];
+        $('#cropMsg').fadeOut();       
     });
 
     $('.btnCrop').on('click', function(){
@@ -92,15 +93,18 @@ $(document).ready(function() {
         //atualiza o campo hidden field com os dados da imagem cortada
         $('#avatar').attr('src', img);        
         $('#picture_datafile').val(img);  
+        $('#cropMsg').fadeIn();
         console.log($('#picture_datafile').val());     
     });
  
     $('.btnZoomIn').on('click', function(){        
-      cropper.zoomIn();         
+      cropper.zoomIn();  
+      $('#cropMsg').fadeOut();       
     });
  
     $('.btnZoomOut').on('click', function(){         
-      cropper.zoomOut();         
+      cropper.zoomOut(); 
+      $('#cropMsg').fadeOut();        
     });
 
 });

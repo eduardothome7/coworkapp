@@ -17,9 +17,9 @@
       <div class="col-md-12">
  
           <div class="imageBox" id="avatarBox">
-              
+              <div id="cropMsg"><i class="fa fa-crop" aria-hidden="true"></i> Imagem recortada!</div>
               <div class="form-group">
-                <%= f.label :selecione_uma_image %>
+                <%= f.label :selecione_uma_imagem %>
                 <%= f.file_field :picture, class: 'input-img' %>
               </div>
               
@@ -40,7 +40,7 @@
 
   <div class="form-group">
     <%= f.label "Título *" %>
-    <%= f.text_field :title, class: 'form-control', placeholder: 'Título da imagem' %>
+    <%= f.text_field :title, class: 'form-control', placeholder: 'Título da imagem', required: true %>
   </div>
 
   <div class="form-group">
