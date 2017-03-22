@@ -5,12 +5,13 @@
 
 <% @rooms.each do |room| %>
   <div class="row room">
-    <div class="col-md-2">
-      THUMB
+    <div class="col-md-2 thumb" style="background: url(<%= room.photos.last.picture.thumb_small if room.photos.any? %>)">
+      <!-- <%= image_tag(room.photos.last.picture.thumb_small) if room.photos.any? %> -->
     </div>
     <div class="col-md-9">
       <h4><%= link_to room do %><%= room.name.titleize %><% end %></h4>
-      <p><%= room.description %></p>
+      <p class="description"><%= room.description %></p><br>
+      <p><span class="glyphicon glyphicon-map-marker"></span> <%= room.full_address %></p>
     </div>    
     <div class="col-md-1">
       <div class="btn-group">

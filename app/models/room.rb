@@ -40,5 +40,9 @@ class Room < ApplicationRecord
     # status.include?('contact')
   end
 
+  def full_address
+   "#{address} #{n}, #{ngb}, #{city} - #{country}"
+  end
+
 
 end

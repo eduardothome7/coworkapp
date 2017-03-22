@@ -31,9 +31,13 @@ section#cover {
 		position: relative;
 
 		h1, h2, h3, h4 {
+		font-family: 'Poiret One', cursive;
 		    position: absolute;
 		    color: #fff;
-		    top: 15em;
+		    top: 11.7em;
+		    background: rgba(0,0,0,0.72);
+		    padding: 4px 13px 7px 10px;
+		    color: #afafaf;
 		}
 
 		.btn {
@@ -180,5 +184,61 @@ p.description {
 .box_info {
 	span, i {
 		color: #7c7c7c;
+	}
+}
+
+
+.thumb {
+	
+	height: 9em;
+    background-size: cover;
+	
+	img {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    max-width: 100%;
+	}
+}
+
+
+.align-right {
+	text-align: right;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.box_add {
+	
+	i, span {
+		color: #c4c4c4;
+	}
+
+	a, a:hover, a:active, a:focus {
+		text-decoration: none;
+		color: #c4c4c4;
+	}
+	
+	&:hover, &:active, &:focus {
+		a, a:hover, a:focus, a:active {
+			text-decoration: none;
+			color: #c4c4c4;
+		}
+	}
+}
+
+
+@media (max-width: 600px) { 
+	section#cover {
+		.info {
+			h1, h2, h3, h4 {
+				position: absolute;
+			    top: 9em;
+			    width: 100%;
+			    text-align: center;
+			}
+		}
 	}
 }

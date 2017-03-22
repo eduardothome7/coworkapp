@@ -4,7 +4,9 @@
     <section id="cover" style="background: url(<%= @room.cover_url %>);background-size: cover;background-position: 0px;">
       <div class="container info">
         <%= link_to 'alterar imagem de capa', '/room_steps/cover', :room_id => @room.id %>
-        <h3><%= @room.name.titleize %></h3> <%= link_to edit_room_path(@room), class: 'btn btn-default' do %> <span class="glyphicon glyphicon-cog"></span> Editar Informações <% end %> 
+        <div class="row">
+        <h2><%= @room.name.titleize %></h2>
+        <%= link_to edit_room_path(@room), class: 'btn btn-default' do %> <span class="glyphicon glyphicon-cog"></span> Editar Informações <% end %> 
       </div>
     </section>
   
@@ -27,13 +29,15 @@
                 </div>
               </div>
             <% end %>
-            <div class="col-md-4 box_info">
-              <p><br></p>
-              <br>
-              <p style="text-align: center; font-size: 5em;"><i class="fa fa-upload" aria-hidden="true"></i></p>
-              <br>
-              <p><%= link_to 'Adicionar Imagem', new_room_photo_path(@room), class: 'btn btn-default btn-block' %></p>
-            </div>
+            <%= link_to new_room_photo_path(@room) do %>
+              <div class="col-md-4 box_info box_add">
+                <p><br></p>
+                <br>
+                <p style="text-align: center; font-size: 5em;"><i class="fa fa-upload" aria-hidden="true"></i></p>
+                <br>
+                <p class="text-center">Adicionar imagem á galeria</p>
+              </div>
+            <% end %>
           </div>
         <% else %>
           <div class="row">
