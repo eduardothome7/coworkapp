@@ -20,7 +20,7 @@ class CreateRooms < ActiveRecord::Migration[5.0]
       t.string :cover
       t.string :address
       t.string :slug
-      t.bool :active
+      t.boolean :active
       t.timestamps
     end
   end
