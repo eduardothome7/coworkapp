@@ -1,7 +1,7 @@
 <%= render 'layouts/header' %>
   <body>
     <%= render 'layouts/navbar' %>
-    <section id="cover" style="background: url(<%= @room.cover_url %>)">
+    <section id="cover" style="background: url(<%= @room.cover_url %>);background-size: cover;background-position: 0px;">
       <div class="container info">
         <%= link_to 'alterar imagem de capa', '/room_steps/cover', :room_id => @room.id %>
         <h3><%= @room.name.titleize %></h3> <%= link_to edit_room_path(@room), class: 'btn btn-default' do %> <span class="glyphicon glyphicon-cog"></span> Editar Informações <% end %> 
@@ -15,7 +15,6 @@
     <section id="gallery">
       <div class="container">
         <h4>Galeria</h4>
-        <hr>
         <p id="notice_galery"></p>
         <% if @room.photos.any? %> 
           <div class="row ">
@@ -31,7 +30,7 @@
             <div class="col-md-4 box_info">
               <p><br></p>
               <br>
-              <p style="text-align: center; font-size: 5em;"><span class="glyphicon glyphicon-picture"></span></p>
+              <p style="text-align: center; font-size: 5em;"><i class="fa fa-upload" aria-hidden="true"></i></p>
               <br>
               <p><%= link_to 'Adicionar Imagem', new_room_photo_path(@room), class: 'btn btn-default btn-block' %></p>
             </div>
