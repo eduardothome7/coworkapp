@@ -26,9 +26,9 @@ class PhotosController < ApplicationController
   # POST /photos.json
   def create
     @photo = @room.photos.new(photo_params)
-    @photo.picture = convert_data_uri_to_upload(params[:picture_datafile]) if params[:picture_datafile].length > 100
+    # @photo.picture = convert_data_uri_to_upload(params[:picture_datafile]) if params[:picture_datafile].length > 100
     if @photo.save
-      redirect_to [@photo.room], notice: 'Photo was successfully created.' 
+      redirect_to [@photo.room], notice: 'Foto adicionada com sucesso à Galeria!' 
     else
       render :new 
     end
