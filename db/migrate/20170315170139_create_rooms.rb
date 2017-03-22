@@ -18,7 +18,8 @@ class CreateRooms < ActiveRecord::Migration[5.0]
       t.datetime :open_at
       t.datetime :close_at
       t.string :cover
-      t.string :status
+      t.string :address
+      t.string :slug
       t.bool :active
       t.timestamps
     end
