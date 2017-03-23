@@ -268,7 +268,7 @@ p.description {
     position: relative;
     text-align: center;
     text-transform: uppercase;
-    color: #7d7d7d;
+    color: $gray-lighter;
 }
 
 .progressbar li:before {
@@ -276,7 +276,7 @@ p.description {
     height: 30px;
     content: '';
     line-height: 30px;
-    border: 2px solid #7d7d7d;
+    border: 2px solid $gray-lighter;
     display: block;
     text-align: center;
     margin: 0 auto 10px auto;
@@ -319,7 +319,7 @@ p.description {
     height: 2px;
     content: '';
     position: absolute;
-    background-color: #7d7d7d;
+    background-color: $gray-lighter;
     top: 15px;
     left: -50%;
     z-index: -1;
