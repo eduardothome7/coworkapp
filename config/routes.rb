@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   # root 'search#index'
 
   resources :rooms do
-  	resources :photos
+  	resources :photos do 
+  	  get 'main'
+  	end
   end
 
   root 'rooms#index'

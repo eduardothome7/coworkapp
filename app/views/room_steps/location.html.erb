@@ -1,69 +1,82 @@
 <div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <ul class="progressbar">
+        <li class="active" id="new"></li>
+        <li id="location"></li>
+        <li id="timetable"></li>
+        <li id="contact"></li>
+        <li id="finish"></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
   <div class="col-md-8 col-md-offset-2">
+    <h3>Local</h3>
+    <hr>
 
+    <%= form_for @room, url: wizard_path, method: :put do |f| %>
+      
+      <% if @room.errors.any? %>
+        <div id="error_explanation">
+          <h4><%= pluralize(@room.errors.count, "erros") %> encontrados durante o cadastro da sala:</h4>
 
-  <h3><span class="glyphicon glyphicon-map-marker"></span> Localização</h3>
-  <hr>
+          <ul>
+          <% @room.errors.full_messages.each do |message| %>
+            <li><span class="glyphicon glyphicon-remove"></span> <%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-  <%= form_for @room, url: wizard_path, method: :put do |f| %>
-    
-    <% if @room.errors.any? %>
-      <div id="error_explanation">
-        <h4><%= pluralize(@room.errors.count, "erros") %> encontrados durante o cadastro da sala:</h4>
-
-        <ul>
-        <% @room.errors.full_messages.each do |message| %>
-          <li><span class="glyphicon glyphicon-remove"></span> <%= message %></li>
-        <% end %>
-        </ul>
+      <div class="form-group">
+        <%= f.label :CEP %> <text id="cep_msg"></text>
+        <%= f.text_field :cep, class: 'form-control cep' %>
       </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-5">
+            <%= f.label "logradouro *" %>
+            <%= f.text_field :address, id: 'logradouro', class: 'form-control' %>
+          </div>
+          <div class="col-md-3">
+            <%= f.label "nº *" %>
+            <%= f.text_field :n, class: 'form-control' %>
+          </div>
+          <div class="col-md-4">
+            <%= f.label "bairro *" %>
+            <%= f.text_field :ngb, id: 'bairro', class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-10">
+            <%= f.label "cidade *" %>
+            <%= f.text_field :city, id: 'cidade', class: 'form-control' %>
+          </div>
+          <div class="col-md-2">
+            <%= f.label "uf *" %>
+            <%= f.text_field :country, id: 'uf', class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-9">
+            <%= link_to 'Voltar', edit_room_path(@room) %>
+          </div>
+          <div class="col-md-3">
+              <%= button_tag(type: 'submit', class: "btn btn-primary btn-block") do %>
+                Próximo <span class="glyphicon glyphicon-chevron-right"></span> 
+              <% end %>
+          </div>
+        </div>
+      </div>
+
     <% end %>
-
-    <div class="form-group">
-      <%= f.label :CEP %> <text id="cep_msg"></text>
-      <%= f.text_field :cep, class: 'form-control cep' %>
-    </div>
-
-    <div class="form-group">
-      <div class="row">
-        <div class="col-md-5">
-          <%= f.label "logradouro *" %>
-          <%= f.text_field :address, id: 'logradouro', class: 'form-control' %>
-        </div>
-        <div class="col-md-3">
-          <%= f.label "nº *" %>
-          <%= f.text_field :n, class: 'form-control' %>
-        </div>
-        <div class="col-md-4">
-          <%= f.label "bairro *" %>
-          <%= f.text_field :ngb, id: 'bairro', class: 'form-control' %>
-        </div>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="row">
-        <div class="col-md-10">
-          <%= f.label "cidade *" %>
-          <%= f.text_field :city, id: 'cidade', class: 'form-control' %>
-        </div>
-        <div class="col-md-2">
-          <%= f.label "uf *" %>
-          <%= f.text_field :country, id: 'uf', class: 'form-control' %>
-        </div>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="row">
-        <div class="col-md-9">
-          <%= link_to 'Voltar', edit_room_path(@room) %>
-        </div>
-        <div class="col-md-3">
-          <%= f.submit "Próximo", class: 'btn btn-primary btn-block'  %>
-        </div>
-      </div>
-    </div>
-
-  <% end %>
+  </div>
 </div>

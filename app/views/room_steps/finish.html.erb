@@ -1,14 +1,35 @@
 <div class="row">
-	<div class="col-md-8 col-md-offset-2">
-	
+  <div class="col-md-10 col-md-offset-1">
+    <ul class="progressbar">
+        <li class="active" id="new"></li>
+        <li class="active" id="location"></li>
+        <li class="active" id="timetable"></li>
+        <li class="active" id="contact"></li>
+        <li class="active" id="finish"></li>
+    </ul>
+  </div>
+</div>
 
 
-  <p>Pronto! Você acaba de cadastrar seu Espaço Cowork!</p>
-  <p>Agora você pode <%= link_to "adicionar fotos para o álbum da sala", new_room_photo_path(@room) %>!</p>
-  Ou, pode <%= link_to "deixar para depois", next_wizard_path %> e visualizar seu Espaço.
-
-
-   <%= link_to 'Voltar', previous_wizard_path %>
-   
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h3>Cadastro Completo!</h3>
+    <hr>
+    <p style="color: green"><strong><span class="glyphicon glyphicon-ok"></span> Pronto!</strong> Você acaba de cadastrar seu Espaço Cowork!</p>
+     
+  </div>
+	<div class="col-md-8 col-md-offset-2 box_info">
+  	<p><h4><%= @room.name.titleize %></h4></p>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-md-8">
+          <%= link_to 'Voltar', previous_wizard_path %>
+        </div>    
+        <div class="col-md-4">
+          <%= link_to 'Ir para página deste espaço', @room %>
+        </div>
+      </div>
+    </div>
+  
  </div>
 </div>

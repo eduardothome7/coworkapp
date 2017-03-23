@@ -30,7 +30,7 @@ gem 'momentjs-rails'
 gem 'bootstrap3-datetimepicker-rails'
 gem 'friendly_id'
 gem "paperclip"
-gem 'lightbox2-rails'
+gem 'fancybox-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

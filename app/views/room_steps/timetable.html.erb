@@ -1,4 +1,16 @@
 <div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <ul class="progressbar">
+        <li class="active" id="new"></li>
+        <li class="active" id="location"></li>
+        <li id="timetable"></li>
+        <li id="contact"></li>
+        <li id="finish"></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
 	<div class="col-md-8 col-md-offset-2">
 
 
@@ -35,11 +47,16 @@
 
   <div class="form-group">
     <div class="row">
-      <div class="col-md-9">
+      <div class="col-md-8">
        	<%= link_to 'Voltar', previous_wizard_path %>
       </div>		
+      <div class="col-md-1"><p>
+        <%= link_to 'Pular', next_wizard_path %></p>
+      </div>
       <div class="col-md-3">
-        <%= f.submit "Próximo", class: 'btn btn-primary btn-block'  %>
+        <%= button_tag(type: 'submit', class: "btn btn-primary btn-block") do %>
+          Próximo <span class="glyphicon glyphicon-chevron-right"></span> 
+        <% end %>
       </div>
     </div>
   </div>

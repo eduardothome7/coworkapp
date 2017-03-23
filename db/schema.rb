@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170321185856) do
+ActiveRecord::Schema.define(version: 20170323122525) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20170321185856) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "picture"
+    t.boolean  "main"
   end
 
   create_table "rooms", force: :cascade do |t|

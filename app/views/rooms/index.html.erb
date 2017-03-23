@@ -9,23 +9,35 @@
       <!-- <%= image_tag(room.photos.last.picture.thumb_small) if room.photos.any? %> -->
     </div>
     <div class="col-md-9">
-      <h4><%= link_to room do %><%= room.name.titleize %><% end %></h4>
+      <div class="row">
+        <div class="col-md-6">
+          <h4><%= link_to room do %><%= room.name.titleize %><% end %></h4>
+        </div>
+        <div class="col-md-5">
+         <!--  <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="<%= room.complete %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= room.complete %>%;">
+              <%= room.complete %>%
+            </div>
+          </div> -->
+        </div>
+        <div class="col-md-1">
+          <div class="btn-group">
+            <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="glyphicon glyphicon-cog"></span> Configuração
+            </button>
+            <ul class="dropdown-menu">
+              <li><%= link_to 'Editar', edit_room_path(room) %></li>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to room, method: :delete, data: {confirm: 'Are you sure?'} do %><span class="glyphicon glyphicon-trash"></span> Excluir <% end %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <p class="description"><%= room.description %></p><br>
       <p><span class="glyphicon glyphicon-map-marker"></span> <%= room.full_address %></p>
     </div>    
-    <div class="col-md-1">
-      <div class="btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="glyphicon glyphicon-cog"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><%= link_to 'Editar', edit_room_path(room) %></li>
-          <li role="separator" class="divider"></li>
-          <li><%= link_to 'Excluir', room, method: :delete, data: {confirm: 'Are you sure?', verify: "#{room.name}", verify_text: 'Digite o nome da Sala para excluir'} %></li>
-        </ul>
-      </div>
-    </div>
   </div>  
 <% end %>
 
 <%= link_to 'New Room', new_room_path %>
+

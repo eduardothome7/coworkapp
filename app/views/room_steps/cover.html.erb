@@ -1,8 +1,21 @@
 <div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <ul class="progressbar">
+        <li class="active" id="new"></li>
+        <li class="active" id="location"></li>
+        <li class="active" id="timetable"></li>
+        <li class="active" id="contact"></li>
+        <li id="cover"></li>
+        <li id="finish"></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
 	<div class="col-md-8 col-md-offset-2">
 
 
-<h3>Foto Principal</h3>
+<h3>Imagem de Capa</h3>
 <hr>
 <%= form_for @room, url: wizard_path, method: :put do |f| %>
   
@@ -19,6 +32,7 @@
   <% end %>
 
   <%= hidden_field_tag :picture_datafile, id: 'picture_datafile' %>
+  <%= hidden_field_tag :status %>
   <%= f.file_field :cover, class: 'input-img' %>
 
   <div class="row form-set">
@@ -42,11 +56,16 @@
 
   <div class="form-group">
     <div class="row">
-      <div class="col-md-9">
+      <div class="col-md-8">
        	<%= link_to 'Voltar', previous_wizard_path %>
-      </div>		
+      </div>	
+      <div class="col-md-1">
+        <%= link_to 'Pular', next_wizard_path %>
+      </div>  	
       <div class="col-md-3">
-        <%= f.submit "Salvar Sala", class: 'btn btn-primary btn-block'  %>
+          <%= button_tag(type: 'submit', class: "btn btn-primary btn-block") do %>
+            Salvar <span class="glyphicon glyphicon-ok"></span> 
+          <% end %>
       </div>
     </div>
   </div>

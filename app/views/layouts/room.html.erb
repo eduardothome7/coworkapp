@@ -24,13 +24,13 @@
               <div id="img_<%= photo.id %>" class="col-md-4 img_gallery">
                 <a href="<%= photo.picture_url %>" rel="lightbox" data-lightbox="room-gallery"><%= image_tag(photo.picture.thumbnail) %></a>
                 <div class="actions">
-                  <%= link_to edit_room_photo_path(@room), class: 'btn btn-default btn-block' do %><span class="glyphicon glyphicon-cog"></span><% end %>
+                  <%= link_to edit_room_photo_path([photo.room, photo]), class: 'btn btn-default btn-block' do %><span class="glyphicon glyphicon-cog"></span><% end %>
                   <%= link_to [photo.room, photo], method: :delete, remote: true, data: {confirm: 'Deseja realmente excluir a imagem '}, class: 'btn btn-default', atl: 'Excluir Imagem' do %> <span class="glyphicon glyphicon-trash"></span><% end %>
                 </div>
               </div>
             <% end %>
             <%= link_to new_room_photo_path(@room) do %>
-              <div class="col-md-4 box_info box_add">
+              <div class="col-md-4 box_add">
                 <p><br></p>
                 <br>
                 <p style="text-align: center; font-size: 5em;"><i class="fa fa-upload" aria-hidden="true"></i></p>

@@ -18,7 +18,7 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require cropbox-min
-//= require lightbox
+//= require fancybox
 //= require_tree .
 
 $(document).ready(function() {

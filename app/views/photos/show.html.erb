@@ -20,5 +20,5 @@
   <%= @photo.description %>
 </p>
 
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+<%= link_to 'Edit', edit_room_photo_path([@photo.room, @photo]) %> |
+<%= link_to 'Back', room_photos_path(@photo.room) %>

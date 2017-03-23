@@ -29,11 +29,11 @@ class Room < ApplicationRecord
   end
 
   def active_or_location?
-    status.include?('location')
+    # status.include?('location')
   end
 
   def timetable?
-    # status.include?('contact')
+    # status.include?('timetable')
   end
 
   def contact?
@@ -44,5 +44,12 @@ class Room < ApplicationRecord
    "#{address} #{n}, #{ngb}, #{city} - #{country}"
   end
 
+  def complete
+
+    if instagram_profile
+     "40"
+    end
+  
+  end
 
 end

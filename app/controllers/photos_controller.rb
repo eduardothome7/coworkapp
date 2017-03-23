@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_action :set_photo, only: [:show, :edit, :update, :destroy]
+  before_action :set_photo, only: [:show, :edit, :update, :destroy, :main]
   before_action :set_room, only: [:index, :show, :new, :create, :edit, :update, :update, :destroy]
 
   # GET /photos
@@ -57,6 +57,11 @@ class PhotosController < ApplicationController
       format.js 
       format.json { head :no_content }
     end
+  end
+
+  def main
+    # @photo.set_main!
+    respond_to :js
   end
 
   private
