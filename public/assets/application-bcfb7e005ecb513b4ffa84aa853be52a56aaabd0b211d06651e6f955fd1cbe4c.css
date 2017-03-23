@@ -13036,280 +13036,51 @@ button.close {
   border: 0;
 }
 
-/* Preload images */
-/* line 2, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-body:after {
-  content: url("/assets/lightbox/close-5d62e6c90005bfb71f6abb440f9e4753681cb23bbd5e60477ab6f442d2f0e69c.png") url("/assets/lightbox/loading-225aa88b6ab02c06222ec9468d62e15fa188e39cdb9431d1f55401ad380753ed.gif") url("/assets/lightbox/prev-7fd9273f20fdb1229c224341271a119020a5eee74ccf6b4605730917c864caf2.png") url("/assets/lightbox/next-15b869b02c6fbaa8c6c26445a2dd2d9bad80fd27b1409f8179e5dd89dc89d90a.png");
-  display: none;
-}
-
-/* line 7, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-body.lb-disable-scrolling {
-  overflow: hidden;
-}
-
-/* line 11, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lightboxOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  background-color: black;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
-  display: none;
-}
-
-/* line 22, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lightbox {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  z-index: 10000;
-  text-align: center;
-  line-height: 0;
-  font-weight: normal;
-}
-
-/* line 32, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lightbox .lb-image {
-  display: block;
-  height: auto;
-  max-width: inherit;
-  border-radius: 3px;
-}
-
-/* line 39, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lightbox a img {
-  border: none;
-}
-
-/* line 43, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-outerContainer {
-  position: relative;
-  background-color: white;
-  *zoom: 1;
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
-  border-radius: 4px;
-}
-
-/* line 53, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-outerContainer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 59, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-container {
-  padding: 4px;
-}
-
-/* line 63, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-loader {
-  position: absolute;
-  top: 43%;
-  left: 0;
-  height: 25%;
-  width: 100%;
-  text-align: center;
-  line-height: 0;
-}
-
-/* line 73, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-cancel {
-  display: block;
-  width: 32px;
-  height: 32px;
-  margin: 0 auto;
-  background: url("/assets/lightbox/loading-225aa88b6ab02c06222ec9468d62e15fa188e39cdb9431d1f55401ad380753ed.gif") no-repeat;
-}
-
-/* line 81, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
-}
-
-/* line 90, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-container > .nav {
-  left: 0;
-}
-
-/* line 94, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-nav a {
-  outline: none;
-  background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
-}
-
-/* line 99, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-prev, .lb-next {
-  height: 100%;
-  cursor: pointer;
-  display: block;
-}
-
-/* line 105, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-nav a.lb-prev {
-  width: 34%;
-  left: 0;
-  float: left;
-  background: url("/assets/lightbox/prev-7fd9273f20fdb1229c224341271a119020a5eee74ccf6b4605730917c864caf2.png") left 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
-}
-
-/* line 118, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-nav a.lb-prev:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
-/* line 123, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-nav a.lb-next {
-  width: 64%;
-  right: 0;
-  float: right;
-  background: url("/assets/lightbox/next-15b869b02c6fbaa8c6c26445a2dd2d9bad80fd27b1409f8179e5dd89dc89d90a.png") right 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
-}
-
-/* line 136, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-nav a.lb-next:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
-/* line 141, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-dataContainer {
-  margin: 0 auto;
-  padding-top: 5px;
-  *zoom: 1;
-  width: 100%;
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-/* line 154, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-dataContainer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 160, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-data {
-  padding: 0 4px;
-  color: #ccc;
-}
-
-/* line 165, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-data .lb-details {
-  width: 85%;
-  float: left;
-  text-align: left;
-  line-height: 1.1em;
-}
-
-/* line 172, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-data .lb-caption {
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 1em;
-}
-
-/* line 178, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-data .lb-number {
-  display: block;
-  clear: left;
-  padding-bottom: 1em;
-  font-size: 12px;
-  color: #999999;
-}
-
-/* line 186, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-data .lb-close {
-  display: block;
-  float: right;
-  width: 30px;
-  height: 30px;
-  background: url("/assets/lightbox/close-5d62e6c90005bfb71f6abb440f9e4753681cb23bbd5e60477ab6f442d2f0e69c.png") top right no-repeat;
-  text-align: right;
-  outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
-  -webkit-transition: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-}
-
-/* line 202, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
-.lb-data .lb-close:hover {
-  cursor: pointer;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
 /* line 1, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .form-control {
   border-radius: 0;
 }
 
 /* line 5, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+.btn {
+  border-radius: 0;
+}
+
+/* line 9, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .span-group {
   position: relative;
 }
-/* line 8, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 12, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .span-group .span-input {
   position: absolute;
   top: 60%;
   left: 9px;
 }
-/* line 14, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 18, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .span-group .form-control {
   padding-left: 30px;
 }
 
-/* line 22, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 26, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 #error_explanation h4 {
   color: red;
 }
-/* line 26, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 30, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 #error_explanation ul {
   background: #f9f9f9;
   padding-top: 7px;
   padding-bottom: 9px;
 }
-/* line 31, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 35, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 #error_explanation ul li {
   list-style: none;
 }
-/* line 34, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 38, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 #error_explanation ul li span {
   color: red;
 }
 
-/* line 43, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 47, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .file_box {
   background: #f5f5f5;
   margin-top: 2.5rem;
@@ -13317,7 +13088,7 @@ body.lb-disable-scrolling {
   margin-bottom: 30px;
 }
 
-/* line 50, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 54, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .imageBox {
   position: relative;
   height: 628px;
@@ -13328,7 +13099,7 @@ body.lb-disable-scrolling {
   background-repeat: no-repeat;
   cursor: move;
 }
-/* line 60, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 64, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .imageBox .form-group {
   position: absolute;
   top: 20em;
@@ -13337,7 +13108,7 @@ body.lb-disable-scrolling {
   background: rgba(255, 255, 255, 0.8);
   padding: 13px;
 }
-/* line 68, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 72, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .imageBox .form-group [type=file] {
   cursor: inherit;
   display: block;
@@ -13351,12 +13122,12 @@ body.lb-disable-scrolling {
   text-align: right;
   top: 0;
 }
-/* line 82, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 86, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .imageBox .form-group label {
   font-size: 2.5em;
 }
 
-/* line 90, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 94, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .action {
   text-align: center;
   padding-top: 5px;
@@ -13366,7 +13137,7 @@ body.lb-disable-scrolling {
   text-align: center;
 }
 
-/* line 99, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 103, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .imageBox .thumbBox {
   position: absolute;
   top: 137px;
@@ -13380,7 +13151,7 @@ body.lb-disable-scrolling {
   background: none repeat scroll 0% 0% transparent;
 }
 
-/* line 112, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 116, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .imageBox .coverBox {
   position: absolute;
   top: 287px;
@@ -13394,7 +13165,7 @@ body.lb-disable-scrolling {
   background: none repeat scroll 0% 0% transparent;
 }
 
-/* line 125, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 129, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .imageBox .spinner {
   position: absolute;
   top: 0;
@@ -13406,7 +13177,7 @@ body.lb-disable-scrolling {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* line 136, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 140, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 .cropped {
   border: 1px solid #d3d3d3;
   height: 400px;
@@ -13415,7 +13186,7 @@ body.lb-disable-scrolling {
   text-align: center;
 }
 
-/* line 145, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
+/* line 149, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_forms.scss */
 #cropMsg {
   display: none;
   position: absolute;
@@ -13431,124 +13202,119 @@ body.lb-disable-scrolling {
   font-size: 1.2em;
 }
 
-/* line 6, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 9, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 body.application {
   padding-top: 4em;
 }
 
-/* line 10, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 13, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* line 14, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 17, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+h1, h2, h3, h4 {
+  font-family: 'Poiret One', cursive;
+}
+
+/* line 21, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 .room {
   position: relative;
   background: #fbfbfb;
   margin-top: 5px;
 }
 
-/* line 22, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 29, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 section {
   padding-bottom: 4%;
 }
 
-/* line 26, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 33, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.box_info {
+  background: #f9f9f9;
+}
+
+/* line 37, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 section#cover {
   height: 30em;
   background: #e7e7e7;
 }
-/* line 30, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 41, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 section#cover .info {
   position: relative;
 }
-/* line 33, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 44, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 section#cover .info h1, section#cover .info h2, section#cover .info h3, section#cover .info h4 {
+  font-family: 'Poiret One', cursive;
   position: absolute;
   color: #fff;
-  top: 15em;
+  top: 10.2em;
+  background: rgba(0, 0, 0, 0.72);
+  padding: 4px 13px 7px 10px;
+  color: #afafaf;
 }
-/* line 39, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 54, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 section#cover .info .btn {
   position: absolute;
-  top: 27em;
+  top: 25em;
   right: 5px;
 }
-/* line 45, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 60, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 section#cover .info a {
   position: absolute;
   right: 5px;
 }
 
-/* line 52, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 67, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 section#gallery {
   background: #000;
   color: #fff;
 }
 
-/* line 57, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 72, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 p.description {
   color: #777;
 }
 
-/* line 61, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 76, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 #notice {
   color: green;
   text-align: center;
 }
 
-/* line 69, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
-.img_gallery img {
-  height: auto;
-  display: block;
-}
-/* line 74, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
-.img_gallery .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 100%;
-  right: 0;
-  background-color: #008CBA;
-  overflow: hidden;
-  width: 0;
-  height: 100%;
-  transition: .5s ease;
-}
-/* line 86, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
-.img_gallery:hover .overlay {
-  width: 100%;
-  left: 0;
-}
-
-/* line 92, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 82, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 #mainNav {
   background: #2c3e50;
   border: 1px solid #34495e;
 }
-/* line 97, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 87, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 #mainNav a {
   color: #768798;
 }
-/* line 100, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 90, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 #mainNav a:hover {
   color: #fff;
 }
-/* line 106, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 96, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 #mainNav .navbar-brand {
   font-family: 'Poiret One', cursive;
   font-weight: bold;
   color: orange;
 }
-/* line 114, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 101, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#mainNav .navbar-brand:hover {
+  color: orange;
+}
+/* line 108, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 #mainNav .navbar-form .form-group {
   position: relative;
 }
-/* line 118, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 112, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 #mainNav .navbar-form input[type=text] {
   border: none;
   background: #34495e;
 }
-/* line 123, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 117, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 #mainNav .navbar-form button[type=submit] {
   position: absolute;
   top: 2px;
@@ -13558,47 +13324,233 @@ p.description {
   color: #fff;
 }
 
-/* line 138, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 128, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 .img_gallery {
   position: relative;
   margin-top: 16px;
 }
-/* line 143, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 133, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 .img_gallery .actions {
   position: absolute;
   top: 2px;
   right: 19px;
 }
-/* line 148, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 138, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 .img_gallery .actions .btn {
   border: none;
   color: #5f5c5c;
   font-size: 1.5em;
   padding-top: 8px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 0;
   margin-top: 2px;
 }
-/* line 157, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 147, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 .img_gallery .actions .btn:hover, .img_gallery .actions .btn:active, .img_gallery .actions .btn:focus {
   background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+}
+/* line 154, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.img_gallery .zoom {
+  display: none;
+  position: absolute;
+  top: 2em;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 12px 18px;
+  font-size: 2.2em;
+  left: 5.1em;
+  color: #f1c40f;
+}
+/* line 167, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.img_gallery:hover img {
+  opacity: 0.7;
+}
+/* line 171, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.img_gallery:hover .zoom {
+  display: block;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 
-/* line 166, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 180, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 .box_col {
   margin-top: 16px;
   background: #fff;
   height: 200px;
   position: relative;
 }
-/* line 172, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 186, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 .box_col .btn {
   position: absolute;
   bottom: 12px;
   width: 92%;
 }
 
-/* line 181, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+/* line 195, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
 .box_info span, .box_info i {
   color: #7c7c7c;
+}
+
+/* line 201, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.thumb {
+  height: 9em;
+  background-size: cover;
+}
+/* line 206, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.thumb img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+}
+
+/* line 215, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.align-right {
+  text-align: right;
+}
+
+/* line 219, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.align-center {
+  text-align: center;
+}
+
+/* line 223, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.box_add {
+  color: #2b2b2b;
+}
+/* line 225, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.box_add i, .box_add span {
+  color: #2b2b2b;
+}
+/* line 231, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.box_add:hover, .box_add:active, .box_add:focus {
+  text-decoration: none;
+  color: #545454;
+}
+/* line 235, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.box_add:hover i, .box_add:hover span, .box_add:active i, .box_add:active span, .box_add:focus i, .box_add:focus span {
+  color: #545454;
+}
+
+@media (max-width: 600px) {
+  /* line 245, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+  section#cover .info h1, section#cover .info h2, section#cover .info h3, section#cover .info h4 {
+    position: absolute;
+    top: 9em;
+    width: 100%;
+    text-align: center;
+  }
+}
+/* line 256, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.progressbar {
+  margin-top: 2em;
+  padding-bottom: 5em;
+}
+
+/* line 261, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.progressbar li {
+  list-style-type: none;
+  width: 19.2%;
+  float: left;
+  font-size: 12px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  color: #e2e2e2;
+}
+
+/* line 272, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.progressbar li:before {
+  width: 30px;
+  height: 30px;
+  content: '';
+  line-height: 30px;
+  border: 2px solid #e2e2e2;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: white;
+  font-family: 'Glyphicons Halflings';
+}
+
+/* line 287, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#new:before {
+  content: '\e032';
+}
+
+/* line 291, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#location:before {
+  content: "\e062";
+}
+
+/* line 295, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#timetable:before {
+  content: '\e023';
+}
+
+/* line 299, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#contact:before {
+  content: '\2709';
+}
+
+/* line 303, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#cover:before {
+  content: '\e060';
+}
+
+/* line 307, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#finish:before {
+  content: '\e013';
+}
+
+/* line 311, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+#edit:before {
+  content: "\e065";
+}
+
+/* line 315, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.progressbar li:after {
+  width: 100%;
+  height: 2px;
+  content: '';
+  position: absolute;
+  background-color: #e2e2e2;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+
+/* line 326, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.progressbar li:first-child:after {
+  content: none;
+}
+
+/* line 330, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.progressbar li.active {
+  color: #3498db;
+}
+/* line 333, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.progressbar li.active li:after {
+  color: #3498db;
+}
+
+/* line 338, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.progressbar li.active:before {
+  border-color: #3498db;
+}
+
+/* line 342, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.progressbar li.active + li:after {
+  background-color: #3498db;
+}
+
+/* line 346, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.progress {
+  margin-top: 10px;
+}
+
+/* line 350, C:/Users/eduardo/Sites/coworkapp/app/assets/stylesheets/core/_main.scss */
+.btn-group {
+  margin-top: 9px;
 }

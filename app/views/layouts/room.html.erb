@@ -22,7 +22,7 @@
           <div class="row ">
             <% @room.photos.order('created_at').each do |photo| %>
               <div id="img_<%= photo.id %>" class="col-md-4 img_gallery">
-                <a href="<%= photo.picture_url %>" rel="lightbox" data-lightbox="room-gallery"><%= image_tag(photo.picture.thumbnail) %></a>
+                <a data-fancybox="gallery" class="fancyBox" href="<%= photo.picture_url %>"><%= image_tag(photo.picture.thumbnail) %><div class="zoom"><span class="glyphicon glyphicon-search"></span> </div></a>
                 <div class="actions">
                   <%= link_to edit_room_photo_path([photo.room, photo]), class: 'btn btn-default btn-block' do %><span class="glyphicon glyphicon-cog"></span><% end %>
                   <%= link_to [photo.room, photo], method: :delete, remote: true, data: {confirm: 'Deseja realmente excluir a imagem '}, class: 'btn btn-default', atl: 'Excluir Imagem' do %> <span class="glyphicon glyphicon-trash"></span><% end %>

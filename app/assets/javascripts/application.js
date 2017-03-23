@@ -18,7 +18,6 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require cropbox-min
-//= require fancybox
 //= require_tree .
 
 $(document).ready(function() {
@@ -106,5 +105,12 @@ $(document).ready(function() {
       cropper.zoomOut(); 
       $('#cropMsg').fadeOut();        
     });
+
+    $(".fancyBox, .zoom").fancybox();
+
+    // $('.img_gallery').hover(function(){
+    //     alert('ok');
+    //     $(this).children('.zoom').fadeIn();
+    // });
 
 });
