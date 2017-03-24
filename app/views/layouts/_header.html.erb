@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><% if @room %> <%= @room.name.titleize %> em <% end %> CoworkApp.</title>
+    <title><% if @room && action_name == 'show' %><%= @room.name.titleize %> em <% end %> CoworkApp.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
