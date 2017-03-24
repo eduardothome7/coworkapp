@@ -31,6 +31,8 @@ gem 'bootstrap3-datetimepicker-rails'
 gem 'friendly_id'
 gem "paperclip"
 gem 'fancybox-rails'
+gem 'geocoder'
+gem 'font-mfizz-rails', '~> 1.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

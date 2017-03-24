@@ -284,31 +284,31 @@ p.description {
     font-family: 'Glyphicons Halflings';
 }
 
-#new:before {
+li#new:before {
 	content: '\e032';
 }
 
-#location:before {
+li#location:before {
     content: "\e062";
 }
 
-#timetable:before {
+li#timetable:before {
 	content: '\e023';
 }
 
-#contact:before {
+li#contact:before {
 	content: '\2709';
 }
 
-#cover:before {
+li#cover:before {
 	content: '\e060';
 }
 
-#finish:before {
+li#finish:before {
 	content: '\e013';
 }
 
-#edit:before {
+li#edit:before {
 	content: "\e065";
 }
 
@@ -349,4 +349,17 @@ p.description {
 
 .btn-group {
 	margin-top: 9px;
+}
+
+#location {
+	#map {
+		height: 500px;
+	}
+}
+
+
+footer.footer {
+	background: #f3f3f3;
+    padding-top: 2em;
+    padding-bottom: 4em;
 }

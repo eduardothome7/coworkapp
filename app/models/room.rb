@@ -18,7 +18,10 @@ class Room < ApplicationRecord
 
   after_create :set_active
   has_many :photos
-  mount_uploader :cover, PictureUploader  
+  mount_uploader :cover, PictureUploader
+
+  geocoded_by :full_address
+  after_validation :geocode
 
   def set_active
   	active = true
@@ -50,6 +53,14 @@ class Room < ApplicationRecord
      "40"
     end
   
+  end
+
+  def time_range
+    if open_at == close_at || !open_at.present? || !close_at.present?
+      "24h"
+    elsif open_at.present? && close_at.present?
+      "#{open_at.strftime("%H:%M")} > #{close_at.strftime("%H:%M")}"
+    end
   end
 
 end

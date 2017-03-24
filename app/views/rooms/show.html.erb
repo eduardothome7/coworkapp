@@ -1,29 +1,28 @@
 <p id="notice"><%= notice %></p>
-
-<!-- <div class="row">
-  <div class="col-md-10 col-md-offset-2">
-    <span class="glyphicon glyphicon-map-marker"></span> <%= @room.city %>, <%= @room.country %>
-    <text id="title_rating"> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-half"></span></text>
-  </div>
-</div> -->
-
+<h3>Sobre este Espaço</h3>
+<hr>
+<p class="description"><%= @room.description %></p>
+<p class="description"><span class="glyphicon glyphicon-map-marker"></span> <%= @room.city %></p>
+<br>
+<h3>Contato</h3>
+<hr>
 <div class="row">
-  <div class="col-md-2 col-md-offset-2">
-     <p class="align-right"><span class="glyphicon glyphicon-map-marker"></span> </p>
+  <div class="col-md-6">
+    <h4><strong>Redes Sociais</strong></h4>
+      <p><i class="fa fa-facebook" aria-hidden="true"></i><% if @room.facebook_profile.present? %><%= link_to @room.facebook_profile do %> Perfil no Facebook <% end %> <% else %> <%= link_to 'Editar informações', edit_room_path(@room) %> <% end %></p>
+      <p><i class="fa fa-instagram" aria-hidden="true"></i><% if @room.instagram_profile.present? %><%= link_to @room.instagram_profile do %> Perfil no Instagram <% end %> <% else %> <%= link_to 'Editar informações', edit_room_path(@room) %> <% end %></p>
+      <p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:<%= @room.email %>">Enviar email</a></p>
   </div>
-  <div class="col-md-7"><%= @room.city %></div>
-</div>
-<div class="row">
-  <div class="col-md-2 col-md-offset-2">
-    <p class="align-right"><strong>Sobre este espaço</strong></p>
-  </div>
-  <div class="col-md-7">
-    <p class="description">
-      <%= @room.description %>
-    </p>
+  <div class="col-md-4 col-md-offset-2">
+    <h4><strong>Telefones</strong></h4>
+    <p><span class="glyphicon glyphicon-earphone"></span> <%= @room.telephone %></p>
+    <p><span class="glyphicon glyphicon-phone"></span> <%= @room.celphone %></p>
   </div>
 </div>
-
+<br>
+<h3>Horário de funcionamento </h3>
+<hr>
+<p><span class="glyphicon glyphicon-time"></span> <%= @room.time_range %> </p>
 
 
 

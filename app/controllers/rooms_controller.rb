@@ -4,7 +4,8 @@ class RoomsController < ApplicationController
   # GET /rooms
   # GET /rooms.json
   def index
-    @rooms = Room.all
+    Room.find_each(&:save)
+    @rooms = Room.near("Porto Alegre")
   end
 
   # GET /rooms/1

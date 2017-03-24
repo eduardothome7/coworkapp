@@ -78,8 +78,11 @@ GEM
     ffi (1.9.18-x86-mingw32)
     font-awesome-rails (4.7.0.1)
       railties (>= 3.2, < 5.1)
+    font-mfizz-rails (1.1.0)
+      railties (>= 3.2, < 5.1)
     friendly_id (5.2.0)
       activerecord (>= 4.0.0)
+    geocoder (1.4.3)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     http-cookie (1.0.3)
@@ -203,7 +206,9 @@ DEPENDENCIES
   data-confirm-modal
   fancybox-rails
   font-awesome-rails
+  font-mfizz-rails (~> 1.1)
   friendly_id
+  geocoder
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails

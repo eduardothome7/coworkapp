@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170323122525) do
+ActiveRecord::Schema.define(version: 20170324000232) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -66,6 +66,8 @@ ActiveRecord::Schema.define(version: 20170323122525) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "cover"
+    t.float    "latitude"
+    t.float    "longitude"
     t.index ["slug"], name: "index_rooms_on_slug", unique: true
   end
 
